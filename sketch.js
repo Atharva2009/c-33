@@ -5,6 +5,7 @@ const Constraint = Matter.Constraint;
 
 var engine, world;
 var side1;
+var score=0;
 
 
 function setup() {
@@ -22,7 +23,11 @@ function setup() {
 }
 
 function draw() {
-  background(0); 
+  background(0);
+  textSize(18)
+        fill("white")
+        text("Score : " +score,width-200,height/8)
+         
 Engine.update(engine); 
 
 side1.display()
@@ -32,3 +37,4 @@ side4.display()
 plinko.display()
 drawSprites()
 }
+
